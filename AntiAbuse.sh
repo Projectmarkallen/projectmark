@@ -1,7 +1,7 @@
 #!/bin/bash
 # Original Script by Usnekx
 # Created by Rey
-
+#Remod by Mark King Duran
 # Bruteforce Protection
 iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --set 
 iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --update --seconds 60 --hitcount 10 -j DROP  
