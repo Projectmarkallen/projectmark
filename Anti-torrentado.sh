@@ -1,5 +1,6 @@
 #!/bin/bash
-# Created by Mark King
+# Original Script by Usnekx
+# Created by Rey
 
 # Bruteforce Protection
 iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --set 
