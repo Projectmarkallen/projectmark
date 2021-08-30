@@ -70,24 +70,16 @@ iptables -A INPUT -p tcp --dport 25 -j REJECT
 iptables -A FORWARD -p tcp --dport 25 -j REJECT 
 iptables -A OUTPUT -p tcp --dport 25 -j REJECT 
 
-apt install fail2ban
-rm -f /root/Anti-torrentado
+rm -f /root/AntiAbuse.sh
 
 clear
-echo "Anti Torrent Installed!"
+echo "Anti-Abuse Succesfully Installed!"
 echo " "
-echo "Fail2ban"
+echo "Features:"
 echo "Bruteforce Protection"
 echo "Port Scanning Protection"
 echo "Torrent Blocking"
 echo " "
-echo ""
-echo "Created Mark King Duran"
-echo " Special Thanks "
-echo "Boss Juan(Gvpnhub) "
-echo " YAMETE KUDASAI"
-echo " "
-echo " "
-echo " SABIHIN MOTO SA MAG TOTORRENT"
-echo "TANGINA KA GAGO HINDOT "
+echo "Original Script by Usnekx"
+echo "Created by Rey"
 echo " "
