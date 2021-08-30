@@ -1,6 +1,5 @@
 #!/bin/bash
-# Original Script by Usnekx
-# Created by Rey
+# Created by Mark King
 
 # Bruteforce Protection
 iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --set 
@@ -70,16 +69,24 @@ iptables -A INPUT -p tcp --dport 25 -j REJECT
 iptables -A FORWARD -p tcp --dport 25 -j REJECT 
 iptables -A OUTPUT -p tcp --dport 25 -j REJECT 
 
-rm -f /root/AntiAbuse.sh
+apt install fail2ban
+rm -f /root/Antitorrentado.sh
 
 clear
-echo "Anti-Abuse Succesfully Installed!"
+echo "Anti Torrent Installed!"
 echo " "
-echo "Features:"
+echo "Fail2ban"
 echo "Bruteforce Protection"
 echo "Port Scanning Protection"
 echo "Torrent Blocking"
 echo " "
-echo "Original Script by Usnekx"
-echo "Created by Rey"
+echo ""
+echo "Created Mark King Duran"
+echo " Special Thanks "
+echo "Boss Juan(Gvpnhub) "
+echo " YAMETE KUDASAI"
+echo " "
+echo " "
+echo " SABIHIN MOTO SA MAG TOTORRENT"
+echo "TANGINA KA GAGO HINDOT "
 echo " "
