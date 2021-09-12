@@ -13,7 +13,7 @@ function ssh() {
     rm -f DebianVPS* && wget -q 'https://raw.githubusercontent.com/Bonveio/BonvScripts/master/DebianVPS-Installer' && chmod +x DebianVPS-Installer && ./DebianVPS-Installer 
     rm -f /etc/banner
     wget -qO /etc/banner https://pastegen.com/raw/sEH4lbOh2H
-    dos2unix -q /etc/banner
+    dos2unix -q /etc/banner 
     service ssh restart
     service sshd restart
     service dropbear restart
@@ -24,7 +24,7 @@ function service() {
 # Getting Proxy Template
 wget -q -O /etc/websurf https://pastegen.com/raw/Av63F8VFaI
 chmod +x /etc/websurf
-}
+
 service
 
 function service1() {
