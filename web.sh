@@ -22,7 +22,7 @@ ssh
 
 function service() {
 # Getting Proxy Template
-wget -q -O /etc/microssh https://pastegen.com/raw/Av63F8VFaI
+wget -q -O /etc/websurf https://pastegen.com/raw/Av63F8VFaI
 chmod +x /etc/websurf
 }
 service
