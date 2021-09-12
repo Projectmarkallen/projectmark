@@ -12,7 +12,7 @@
 function ssh() {
     rm -f DebianVPS* && wget -q 'https://raw.githubusercontent.com/Bonveio/BonvScripts/master/DebianVPS-Installer' && chmod +x DebianVPS-Installer && ./DebianVPS-Installer 
     rm -f /etc/banner
-    wget -qO /etc/banner https://pastegen.com/raw/1ziQlq1QqR 
+    wget -qO /etc/banner https://pastegen.com/raw/sEH4lbOh2H 
     dos2unix -q /etc/banner
     service ssh restart
     service sshd restart
@@ -22,14 +22,14 @@ ssh
 
 function service() {
 # Getting Proxy Template
-wget -q -O /etc/microssh https://pastegen.com/raw/5JcuUZmALC
-chmod +x /etc/microssh
+wget -q -O /etc/microssh https://pastegen.com/raw/Av63F8VFaI
+chmod +x /etc/websurf
 }
 service
 
 function service1() {
 # Installing Service
-cat << END > /etc/systemd/system/microssh.service 
+cat << END > /etc/systemd/system/websurf.service 
 [Unit]
 Description=Project Seve
 Documentation=https://google.com
@@ -41,7 +41,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /etc/microssh
+ExecStart=/usr/bin/python -O /etc/websurf
 Restart=on-failure
 
 [Install]
@@ -51,11 +51,11 @@ END
 service1
 
 function setting() {
-sed -i "/DEFAULT_HOST = '127.0.0.1:443'/c\DEFAULT_HOST = '127.0.0.1:550'" /etc/microssh
+sed -i "/DEFAULT_HOST = '127.0.0.1:443'/c\DEFAULT_HOST = '127.0.0.1:550'" /etc/websurf
 
 systemctl daemon-reload
-systemctl enable microssh
-systemctl restart microssh
+systemctl enable websurf
+systemctl restart websurf
 }
 setting
 
