@@ -1,4 +1,4 @@
-#!/bin/bash
+
 # Debian 9 and 10 VPS Installer
 # Script by Bonveio Abitona
 # 
